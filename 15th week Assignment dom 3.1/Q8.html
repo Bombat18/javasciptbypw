@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-size: 1.2cm;
+            height: 100vh;
+
+            align-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            color: aliceblue;
+
+        }
+
+        #clock {
+            border: solid white;
+            padding: 10px 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        00:00:00
+    </div>
+    <script>
+        function updateTime() {
+            const time = new Date();
+            const hours = time.getHours().toString().padStart(2, '0');
+            const minutes = time.getMinutes().toString().padStart(2, '0');
+            const seconds = time.getSeconds().toString().padStart(2, '0');
+            const hexColor = `#${hours}${minutes}${seconds}`;
+            document.body.style.backgroundColor = hexColor;
+            document.getElementById(`clock`).textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime,1000);
+    </script>
+</body>
+
+</html>

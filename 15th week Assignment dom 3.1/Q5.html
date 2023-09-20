@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {
+
+            width: 400px;
+        }
+
+        .imageggle {
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body style="display: flex; align-items: flex-start; flex-direction: column; ">
+    <h1>Your Image is Visible</h1>
+    <button id="button" style="margin: 13px 0px;">Toggle Image</button>
+    <img id="image" src="https://cdn.pwskills.com/assets/uploads/thumbnails/64f2d7cffe327f7f93a3269c.png" alt="">
+    <script>
+        const Button = document.getElementById('button')
+        const Image = document.getElementById('image')
+        Button.addEventListener('click', () => {
+            Image.classList.toggle("imageggle")
+        })
+    </script>
+</body>
+
+</html>

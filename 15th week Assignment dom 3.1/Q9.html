@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="login">Login</button>
+    <button id="logout">Logout</button>
+    <h2>User Has Not logged In</h2>
+
+    <script>
+        const Login = document.getElementById("login");
+        const Logout = document.getElementById("logout");
+        const h2 = document.querySelector("h2");
+        Login.addEventListener("click", function () {
+            h2.innerText = "User is Logged In";
+        });
+        Logout.addEventListener("click", function () {
+            h2.innerText = "User Has Not Logged In";
+        });
+    </script>
+</body>
+
+</html>
